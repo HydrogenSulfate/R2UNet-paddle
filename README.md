@@ -28,14 +28,6 @@ segmentation.
 | Original Paper's Results | 0.8171          | 0.7792| 0.9813 | 0.9556 | 0.9782 |  
 | Ours Results             | 0.8232     | 0.8164 | 0.9763 | 0.9557 | 0.8963 |  
 
-## Reprod log
-
-- [forward_diff.log](./diff/forward_diff.log)  
-- [metric_diff.log](./diff/metric_diff.log)  
-- [loss_diff.log](./diff/loss_diff.log) 
-- [bp_align_diff.log](./diff/bp_align_diff.log)  
-- [train_align_diff.log](./diff/train_align_diff.log)  
-- [train log](./diff/train.log) 
 
 ## Train & Test
 
