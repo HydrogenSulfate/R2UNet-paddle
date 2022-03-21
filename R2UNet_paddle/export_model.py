@@ -419,7 +419,7 @@ class model:
                             name='input'),
         self.network = to_static(self.network, input_spec=input_spec)
         paddle.jit.save(self.network, "inference")
-        print(f"model (SVHN) has been already saved in (inference).")
+        print(f"model (R2UNet) has been already saved in (inference).")
 
     def _infer_static(self, model_file, params_file):
         from paddle.inference import Config, create_predictor
@@ -567,12 +567,12 @@ if __name__ == '__main__':
     # m.show_pkl()
     # m.forward_paddle()
     # m.loss_paddle()
-    m.metric_paddle()
-    # m._trans("/workspace/hesensen/R2UNet-paddle/R2UNet_paddle/R2U-Net.pdparams")
-    model_file = '/workspace/hesensen/R2UNet-paddle/R2UNet_paddle/inference.pdmodel'
-    params_file = model_file.replace(".pdmodel", '.pdiparams')
+    # m.metric_paddle()
+    m._trans("./R2U-Net.pdparams")
+    # model_file = '/workspace/hesensen/R2UNet-paddle/R2UNet_paddle/inference.pdmodel'
+    # params_file = model_file.replace(".pdmodel", '.pdiparams')
 
-    m._infer_static(model_file, params_file)
+    # m._infer_static(model_file, params_file)
     # m.bp_align_paddle()
     #####################
 

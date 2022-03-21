@@ -567,9 +567,9 @@ if __name__ == '__main__':
     # m.show_pkl()
     # m.forward_paddle()
     # m.loss_paddle()
-    m.metric_paddle()
+    # m.metric_paddle()
     # m._trans("/workspace/hesensen/R2UNet-paddle/R2UNet_paddle/R2U-Net.pdparams")
-    model_file = '/workspace/hesensen/R2UNet-paddle/R2UNet_paddle/inference.pdmodel'
+    model_file = './inference.pdmodel'
     params_file = model_file.replace(".pdmodel", '.pdiparams')
 
     m._infer_static(model_file, params_file)
